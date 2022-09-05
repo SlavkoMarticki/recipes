@@ -1,0 +1,62 @@
+.sideBar{
+    height: 100vh;
+    width: 20%;
+    background-color: rgba(255, 255, 255);
+    float: left;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.sideBar .sideBar__logo h1{
+    margin: 0px;
+    padding: 0px;
+   
+}
+
+.sideBar .sideBar__buttonList{
+    margin-top: 100px;
+}
+.sideBar .sideBar__buttonList button{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.sideBar .sideBar__buttonList button:hover{
+    color: white;
+    background-color:rgb(78, 78, 233);
+    transition: 0.2s;
+}
+.addRecipeBlock{
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(70%,-50%);
+    width: 50%;
+    height: 80%;  
+    border-radius: 7px;
+}
+.addRecipeBlock h1{
+    margin-left: 15px;
+}
+.addRecipeBlock .addRecipeBlock__inputs{
+    height: 90%;
+    width: 40%;
+    margin: auto;
+}
+.addRecipeBlock .addRecipeBlock__inputs label{
+    font-size: 25px;
+    margin-top: 10%;
+}
+.addRecipeBlock .addRecipeBlock__inputs input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 30px;
+}
+.addRecipeBlock .addRecipeBlock__inputs textarea{
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
