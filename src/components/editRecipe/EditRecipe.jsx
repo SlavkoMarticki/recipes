@@ -4,9 +4,7 @@ import {useNavigate} from "react-router-dom";
 
 export default function EditRecipe(props){
     const navigate = useNavigate();
-    const {setUzmiPodatke} = props;
 
-    alert(setUzmiPodatke)
     
     return (<div>
         <div className="sideBar">

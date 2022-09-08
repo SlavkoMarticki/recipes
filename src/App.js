@@ -10,8 +10,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
   const [recipeDetails, setRecipeDetails] = useState([]);
-  const [newRecipe, setNewRecipe] = useState([]);
-  const [] = useState([]);
+  //const [newRecipe, setNewRecipe] = useState([]);
+  const [recipesData, setRecipesData] = useState([]);
+
 
   return (
     <div>
@@ -28,13 +29,13 @@ export default function App() {
             element={
               <UserRecipes
                 setRecipeDetails={setRecipeDetails}
-                newRecipe={newRecipe}
+                recipesData={recipesData}
               />
             }
           />
           <Route
             path="/add-recipe"
-            element={<AddRecipe setNewRecipe={setNewRecipe} />}
+            element={<AddRecipe setRecipesData={setRecipesData} recipesData={recipesData}/>}
           ></Route>
           <Route path="/edit-recipe" element={<EditRecipe />}></Route>
         </Routes>

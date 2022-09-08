@@ -5,19 +5,20 @@ import {ToastContainer, toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function AddRecipe(props) {
-  const { setNewRecipe } = props;
+  const { setRecipesData ,recipesData} = props;
   const navigate = useNavigate();
   const imageRef = useRef(null);
   const titleRef = useRef(null);
   const instructionsRef = useRef(null);
 
   const handleInput = (event) => {
+    const data = {
+      title: titleRef.current.value,
+      instructions: instructionsRef.current.value,
+      img: imageRef.current.value,
+    }
     if (event.target.value === "addButton") {
-      setNewRecipe({
-        title: titleRef.current.value,
-        instructions: titleRef.current.value,
-        img: imageRef.current.value,
-      });
+      setRecipesData([...recipesData,data]);
       toast("New recipe added", 
         {
           position: "top-center",
@@ -60,8 +61,10 @@ export default function AddRecipe(props) {
         <div className="addRecipeBlock__inputs">
           <label htmlFor="img">Image</label> <br />
           <input id="img" name="image" ref={imageRef} /> <br />
+
           <label htmlFor="title">Title</label> <br />
           <input id="title" name="title" ref={titleRef} /> <br />
+          
           <label htmlFor="instructions">Instructions</label>
           <br />
           <textarea
