@@ -22,13 +22,17 @@ export default function Home(props) {
     }
   }
 
+  /*
+  axios umesto fetcha pogledaj
+  nauci raditi sa async await 
+  react hook form 
+  */
+
   useEffect(() => {
-    fetchRecipes();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-    
+    fetchRecipes();
+    setLoading(false);
+        
   }, []);
   const getIngridents = (recipe) => {
     let listIngridients = [];
